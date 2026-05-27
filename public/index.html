@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicle Tracker Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="splash">
+  <h2>This app developed by</h2>
+  <h1>Aamir Shabir Lohar</h1>
+  <p>Vehicle Management System</p>
+</div>
+
+<div class="container">
+
+<div class="header-card">
+  <div>
+    <h2>🚗 MH01 BF 5922</h2>
+    <p>ERTIGA</p>
+  </div>
+
+  <div class="month-box" id="monthName"></div>
+</div>
+
+<div class="dashboard">
+
+  <div class="summary-left">
+
+    <div class="summary-item">
+      <span>Total Extra</span>
+      <h3 id="extraText">₹0</h3>
+    </div>
+
+    <div class="summary-item">
+      <span>Total Saving</span>
+      <h3 id="savingText">₹0</h3>
+    </div>
+
+    <div class="summary-item">
+      <span>Maintenance</span>
+      <h3 id="maintenanceText">₹0</h3>
+    </div>
+
+    <div class="summary-item">
+      <span>Final Balance</span>
+      <h3 id="finalText">₹0</h3>
+    </div>
+
+  </div>
+
+  <div class="summary-right">
+    <div class="km-card">
+      <h1 id="totalKM">0</h1>
+      <p>Total KM</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="nav-buttons">
+  <button onclick="showSection('vehicleSection')">🚗 Vehicle</button>
+  <button onclick="showSection('recordSection')">📋 Records</button>
+  <button onclick="showSection('maintenanceSection')">🔧 Maintenance</button>
+  <button onclick="showSection('historySection')">📂 History</button>
+</div>
+
+<div id="vehicleSection" class="card section">
+
+<h3>Vehicle Usage</h3>
+
+<input type="text" id="date" placeholder="Select Date"
+onclick="this.type='date'"
+onblur="if(!this.value)this.type='text'">
+
+<input type="text" id="driver" placeholder="Driver Name">
+<input type="number" id="start" placeholder="Start KM">
+<input type="number" id="end" placeholder="End KM">
+<input type="number" id="diesel" placeholder="Diesel ₹">
+<input type="number" id="paid" placeholder="Paise jama kiye ₹">
+
+<button onclick="addData()">➕ Add Entry</button>
+
+</div>
+
+<div id="recordSection" class="card section hidden">
+
+<h3>Vehicle Records</h3>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Driver</th>
+<th>KM</th>
+<th>₹</th>
+<th>Paid</th>
+<th>Edit</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+</div>
+
+<div id="maintenanceSection" class="card section hidden">
+
+<h3>Maintenance</h3>
+
+<input type="text" id="mDate" placeholder="Select Date"
+onclick="this.type='date'"
+onblur="if(!this.value)this.type='text'">
+
+<input type="text" id="mDriver" placeholder="Driver Name">
+<input type="text" id="mWork" placeholder="Repair Work">
+<input type="number" id="mAmount" placeholder="Amount ₹">
+
+<button onclick="addMaintenance()">➕ Add Maintenance</button>
+
+<h3>Maintenance Records</h3>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Work</th>
+<th>₹</th>
+</tr>
+</thead>
+
+<tbody id="maintenanceBody"></tbody>
+
+</table>
+
+</div>
+
+<div id="historySection" class="card section hidden">
+
+<h3>📂 Monthly History</h3>
+
+<div id="historyBox"></div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+.container{
+  max-width:430px;
+  margin:auto;
+  padding:12px;
+}
+
+#splash{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(45deg,#2563eb,#06b6d4);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+.header-card{
+  background:linear-gradient(45deg,#2563eb,#06b6d4);
+  padding:15px;
+  border-radius:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.header-card p{
+  margin:0;
+}
+
+.month-box{
+  background:rgba(255,255,255,0.2);
+  padding:10px;
+  border-radius:12px;
+  font-size:13px;
+}
+
+.dashboard{
+  display:grid;
+  grid-template-columns:1fr 120px;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.summary-left{
+  display:grid;
+  gap:10px;
+}
+
+.summary-item{
+  background:#1e293b;
+  padding:12px;
+  border-radius:14px;
+}
+
+.summary-item span{
+  font-size:13px;
+  color:#94a3b8;
+}
+
+.summary-item h3{
+  margin:5px 0 0;
+}
+
+.summary-right{
+  display:flex;
+}
+
+.km-card{
+  background:linear-gradient(45deg,#22c55e,#16a34a);
+  width:100%;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.km-card h1{
+  margin:0;
+  font-size:30px;
+}
+
+.card{
+  background:#1e293b;
+  padding:15px;
+  border-radius:18px;
+  margin-bottom:15px;
+}
+
+input,button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  margin:6px 0;
+  font-size:14px;
+}
+
+input{
+  background:#334155;
+  color:white;
+}
+
+button{
+  background:linear-gradient(45deg,#2563eb,#06b6d4);
+  color:white;
+  font-weight:bold;
+}
+
+.nav-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.hidden{
+  display:none;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+th,td{
+  border:1px solid #334155;
+  padding:8px;
+  text-align:center;
+  font-size:12px;
+}
+
+th{
+  background:#2563eb;
+}
+
+.edit-btn{
+  background:orange;
+  padding:5px 8px;
+}
+
+.history-card{
+  background:#334155;
+  padding:12px;
+  border-radius:12px;
+  margin-top:10px;
+}
